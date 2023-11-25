@@ -1,0 +1,16 @@
+def addBinary(a, b):
+
+    max_len = max(len(a), len(b))
+
+    a = a.zfill(max_len)
+    b = b.zfill(max_len)
+    c = ''
+    reminder = 0
+
+    for i in range(max_len-1, -1, -1):
+        c = str((int(a[i]) + int(b[i]) + reminder) % 2) + c
+        reminder = 1 if int(a[i]) + int(b[i])+ reminder > 1 else 0
+
+    c = str(reminder) + c
+
+    return c
