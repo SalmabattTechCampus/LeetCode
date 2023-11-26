@@ -1,0 +1,10 @@
+class Solution(object):
+    def twoSum(self, nums, t):
+
+        n = {}
+        for i, y in enumerate(nums):
+            x = t - y
+            if x in n:
+                return [n[x], i]
+            n[y] = i
+        return []
