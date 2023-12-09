@@ -1,0 +1,5 @@
+def simpleArraySum(ar):
+    x=0
+    for i in range(0,ar_count):
+        x = x + ar[i]
+    return x
